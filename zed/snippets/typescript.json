@@ -1,0 +1,40 @@
+{
+  "expand to console.log": {
+    "prefix": "clg",
+    "body": ["console.log($1)$0"]
+  },
+  "expand to console.error": {
+    "prefix": "cer",
+    "body": ["console.error($1)$0"]
+  },
+  "create a try-catch block": {
+    "prefix": "trycatch",
+    "body": ["try {", "  $1", "} catch (${2:error}) {", "  $3", "}"]
+  },
+  "scaffold a react component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from \"react\";",
+      "",
+      "export default function ${1:ComponentName}() {",
+      "\treturn $2;",
+      "}"
+    ]
+  },
+  "create a function": {
+    "prefix": "fn",
+    "body": ["function ${1:fn}($2) {", "  $3", "}"]
+  },
+  "create an async  function": {
+    "prefix": "asfn",
+    "body": ["async function ${1:fn}($2) {", "  $3", "}"]
+  },
+  "create an arrow function": {
+    "prefix": "arrfn",
+    "body": ["const ${1:fn} = ($2) => {", "  $3", "}"]
+  },
+  "create an async arrow function": {
+    "prefix": "asarrfn",
+    "body": ["const ${1:fn} = async ($2) => {", "  $3", "}"]
+  }
+}
