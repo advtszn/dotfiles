@@ -11,6 +11,16 @@
     "prefix": "trycatch",
     "body": ["try {", "  $1", "} catch (${2:error}) {", "  $3", "}"]
   },
+  "scaffold a react component": {
+    "prefix": "rfc",
+    "body": [
+      "import React from \"react\";",
+      "",
+      "export default function ${1:ComponentName}(${2:params}: ${3:type}) {",
+      "\treturn $4;",
+      "}"
+    ]
+  },
   "create a function": {
     "prefix": "fn",
     "body": ["function ${1:fn}($2) {", "  $3", "}"]

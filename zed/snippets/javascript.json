@@ -16,8 +16,8 @@
     "body": [
       "import React from \"react\";",
       "",
-      "export default function ${1:ComponentName}() {",
-      "\treturn $2;",
+      "export default function ${1:ComponentName}($2) {",
+      "\treturn $3;",
       "}"
     ]
   },
@@ -25,7 +25,7 @@
     "prefix": "fn",
     "body": ["function ${1:fn}($2) {", "  $3", "}"]
   },
-  "create an async  function": {
+  "create an async function": {
     "prefix": "asfn",
     "body": ["async function ${1:fn}($2) {", "  $3", "}"]
   },
