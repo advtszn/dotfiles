@@ -1,0 +1,12 @@
+font-size = 15
+font-family = Monaspace Neon Var
+font-feature = "calt, ss01, ss02, ss03, ss04, ss05, ss06, ss07, ss08, ss09, liga"
+background-opacity = 0.7
+background-blur = true
+window-height = 900
+window-width = 1400
+window-padding-x = 16
+theme = Vesper
+window-inherit-working-directory = false
+working-directory = /Users/advait/Desktop
+keybind = shift+enter=text:\x1b\r

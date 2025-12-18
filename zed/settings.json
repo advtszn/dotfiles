@@ -17,43 +17,43 @@
     "ss06": true,
     "ss07": true,
     "ss08": true,
-    "ss09": true,
+    "ss09": true
   },
   "ui_font_size": 16,
   "buffer_font_size": 14,
   "autosave": {
     "after_delay": {
-      "milliseconds": 1000,
-    },
+      "milliseconds": 1000
+    }
   },
   "auto_indent_on_paste": true,
   "tab_size": 2,
   "relative_line_numbers": "enabled",
   "gutter": {
-    "line_numbers": true,
+    "line_numbers": true
   },
   "tabs": {
-    "file_icons": true,
+    "file_icons": true
   },
   "project_panel": {
     "indent_size": 12,
     "auto_fold_dirs": true,
     "indent_guides": {
-      "show": "always",
+      "show": "always"
     },
-    "sticky_scroll": true,
+    "sticky_scroll": true
   },
   "features": {
-    "edit_prediction_provider": "none",
+    "edit_prediction_provider": "none"
   },
   "lsp": {
     "tailwindcss-language-server": {
       "settings": {
         "classFunctions": ["cva", "cx"],
         "experimental": {
-          "classRegex": ["className=\"([^\"]*)\"", "class=\"([^\"]*)\""],
-        },
-      },
+          "classRegex": ["className=\"([^\"]*)\"", "class=\"([^\"]*)\""]
+        }
+      }
     },
     "discord_presence": {
       "initialization_options": {
@@ -85,15 +85,15 @@
           "large_image": "{base_icons_url}/zed.png",
           "large_text": "Zed",
           "small_image": "{base_icons_url}/idle.png",
-          "small_text": "Idle",
+          "small_text": "Idle"
         },
 
         // Rules to disable presence in specific workspaces
         "rules": {
           "mode": "blacklist", // Can also be "whitelist"
-          "paths": ["absolute path"],
-        },
-      },
-    },
-  },
+          "paths": ["absolute path"]
+        }
+      }
+    }
+  }
 }
