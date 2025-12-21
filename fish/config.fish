@@ -41,7 +41,6 @@ alias gd="git diff"
 alias gs="git status"
 alias gl="git log"
 alias gaa="git add -A"
-alias gc="git clone"
 alias gst="git stash"
 alias gsa="git stash apply"
 
