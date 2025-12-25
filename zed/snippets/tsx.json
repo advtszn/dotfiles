@@ -36,5 +36,21 @@
   "create an async arrow function": {
     "prefix": "asarrfn",
     "body": ["const ${1:fn} = async ($2) => {", "  $3", "}"]
+  },
+  "create a named exported function": {
+    "prefix": "efn",
+    "body": ["export function ${1:fn}($2) {", "  $3", "}"]
+  },
+  "create an async named exported function": {
+    "prefix": "easfn",
+    "body": ["export async function ${1:fn}($2) {", "  $3", "}"]
+  },
+  "create a named exported arrow function": {
+    "prefix": "earrfn",
+    "body": ["export const ${1:fn} = ($2) => {", "  $3", "}"]
+  },
+  "create a named exported async arrow function": {
+    "prefix": "easarrfn",
+    "body": ["export const ${1:fn} = async ($2) => {", "  $3", "}"]
   }
 }

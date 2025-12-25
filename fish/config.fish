@@ -31,6 +31,8 @@ end
 
 
 fish_add_path /Users/advait/go/bin
+fish_add_path $HOME/flutter/bin
+
 
 # dns.toys
 alias dy="dig +short $argv @dns.toys"
