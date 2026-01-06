@@ -1,6 +1,9 @@
 {
-  "languages": {
-    "Python": { "language_servers": ["ty", "!basedpyright"] },
+  "context_servers": {
+    "study-notes-mcp-local": {
+      "enabled": true,
+      "url": "http://localhost:3001/mcp"
+    }
   },
   "vim_mode": true,
   "extend_comment_on_newline": false,

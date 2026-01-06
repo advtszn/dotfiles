@@ -1,0 +1,26 @@
+{
+  "expand to fmt.Println": {
+    "prefix": "fpl",
+    "body": ["fmt.Println($1)"]
+  },
+  "expand to fmt.Printf": {
+    "prefix": "fpf",
+    "body": ["fmt.Printf($1)"]
+  },
+  "expand to fmt.Sprintf": {
+    "prefix": "fspf",
+    "body": ["fmt.Sprintf($1)"]
+  },
+  "create a function": {
+    "prefix": "fn",
+    "body": ["func ${1:fn}($2) $3 {", "  ${0}", "}"]
+  },
+  "create an exported function": {
+    "prefix": "efn",
+    "body": ["func ${1:Fn}($2) $3 {", "  ${0}", "}"]
+  },
+  "check for error": {
+    "prefix": "iferr",
+    "body": ["if err != nil {", "  return ${1:nil}, err", "}"]
+  }
+}
