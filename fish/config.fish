@@ -49,10 +49,12 @@ alias gsa="git stash apply"
 export  CLAUDE_CODE_MAX_OUTPUT_TOKENS=256000
 
 # MegaLLM Configuration
-export MEGALLM_API_KEY="sk-mega-019bbd3ba59fe171cdd826c24d13a062df4e50a5aec33bd77efeb8f68f5e6808"
+export MEGALLM_API_KEY="sk-mega-215e2809ac15ef5dd1b9dc382ff1a26f4894e76e4a20af28e3ee0092cb10873c"
+
+
 
 # MegaLLM Configuration
 export ANTHROPIC_BASE_URL="https://ai.megallm.io"
 
 # MegaLLM Configuration
-export ANTHROPIC_API_KEY="sk-mega-019bbd3ba59fe171cdd826c24d13a062df4e50a5aec33bd77efeb8f68f5e6808"
+export ANTHROPIC_API_KEY="sk-mega-215e2809ac15ef5dd1b9dc382ff1a26f4894e76e4a20af28e3ee0092cb10873c"
