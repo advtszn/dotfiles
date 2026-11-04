@@ -5,17 +5,6 @@ function brew-save --description "Regenerate ~/.Brewfile from what's installed a
     # local-path cargo installs (your own projects) can't be reinstalled from crates.io
     sed -i '' '/^cargo "rust-backend"$/d' ~/.Brewfile
 
-    # dump skips formulae from taps Homebrew doesn't trust, so list them explicitly
-    printf '%s\n' \
-        '' \
-        '# Third-party taps (brew bundle dump omits these)' \
-        'brew "advtszn/tap/rook", trusted: true' \
-        'brew "kriuchkov/tap/tock", trusted: true' \
-        'brew "libsql/sqld/sqld", trusted: true' \
-        'brew "mongodb/brew/mongodb-community", trusted: true' \
-        'brew "mongodb/brew/mongodb-database-tools", trusted: true' \
-        'brew "nats-io/nats-tools/nats", trusted: true' \
-        'brew "tursodatabase/tap/turso", trusted: true' >>~/.Brewfile
-
+    # third-party formulae are included once trusted: brew trust --formula <tap/name>
     chezmoi add ~/.Brewfile; and echo "Brewfile updated. Review with: chezmoi git diff"
 end

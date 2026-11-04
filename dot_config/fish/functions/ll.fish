@@ -1,3 +1,3 @@
 function ll
-    lsd -la --icon never --group-dirs first --date '+%b %d %H:%M' $argv
+    lsd -la $argv
 end

@@ -65,8 +65,6 @@ brew "mkcert"
 brew "mole"
 # Atlas CLI enables you to manage your MongoDB Atlas
 brew "mongodb-atlas-cli"
-# Fast, highly customisable system info script
-brew "neofetch"
 # HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
 brew "nginx"
 # Port scanning utility for large networks
@@ -83,6 +81,8 @@ brew "postgresql@16"
 brew "railway"
 # Persistent key-value database, with built-in net interface
 brew "redis"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
 # Terminal multiplexer
@@ -99,6 +99,19 @@ brew "watchexec"
 brew "wget"
 # Why is this running?
 brew "witr"
+# A terminal UI for exploring Redis
+brew "advtszn/tap/rook", trusted: true
+# Tock v2.0.8 is a simple timetracker for the command line
+brew "kriuchkov/tap/tock", trusted: true
+# The libsql-server application
+brew "libsql/sqld/sqld", trusted: true
+# This package contains standard utilities for interacting with MongoDB.
+brew "mongodb/brew/mongodb-database-tools", trusted: true
+# High-performance, schema-free, document-oriented database
+brew "mongodb/brew/mongodb-community", trusted: true
+# NATS utility
+brew "nats-io/nats-tools/nats", trusted: true
+brew "tursodatabase/tap/turso", trusted: true
 # Powerful log analytics from the comfort of your command-line
 cask "axiomhq/tap/axiom", trusted: true
 # Terminal-based AI coding assistant
@@ -126,12 +139,3 @@ go "honnef.co/go/tools/cmd/staticcheck"
 go "golang.org/x/website/tour"
 cargo "bacon"
 uv "pyrefly"
-
-# Third-party taps (brew bundle dump omits these)
-brew "advtszn/tap/rook", trusted: true
-brew "kriuchkov/tap/tock", trusted: true
-brew "libsql/sqld/sqld", trusted: true
-brew "mongodb/brew/mongodb-community", trusted: true
-brew "mongodb/brew/mongodb-database-tools", trusted: true
-brew "nats-io/nats-tools/nats", trusted: true
-brew "tursodatabase/tap/turso", trusted: true
