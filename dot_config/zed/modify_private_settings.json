@@ -1,0 +1,11 @@
+{{- /* chezmoi:modify-template */ -}}
+{{- /* Zed settings live in .chezmoitemplates/zed-settings.json (no ssh_connections).
+       Local ssh_connections are kept from the existing file and never enter the repo. */ -}}
+{{- $base := includeTemplate "zed-settings.json" . | fromJsonc -}}
+{{- if .chezmoi.stdin -}}
+{{-   $current := .chezmoi.stdin | fromJsonc -}}
+{{-   if hasKey $current "ssh_connections" -}}
+{{-     $_ := set $base "ssh_connections" (get $current "ssh_connections") -}}
+{{-   end -}}
+{{- end -}}
+{{ toPrettyJson "  " $base }}

@@ -1,0 +1,20 @@
+# Safety net: never commit these even if they end up in the source dir
+**/fish_variables
+**/*fish_variables*
+**/.env
+**/.env.*
+**/*.env
+**/*secret*
+**/*secrets*
+**/*.pem
+**/*.key
+**/*_key
+**/id_rsa*
+**/id_ed25519*
+**/google_compute_engine*
+**/hosts.yml
+**/credentials*
+**/access_tokens*
+**/.DS_Store
+**/*.bak
+**/*.bak.*

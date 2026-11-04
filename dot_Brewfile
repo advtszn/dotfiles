@@ -1,0 +1,137 @@
+tap "advtszn/tap", "https://github.com/advtszn/homebrew-tap.git"
+tap "axiomhq/tap"
+tap "kriuchkov/tap"
+tap "libsql/sqld"
+tap "mongodb/brew"
+tap "nats-io/nats-tools"
+tap "tursodatabase/tap"
+# Run your GitHub Actions locally
+brew "act"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
+# Manage your dotfiles across multiple diverse machines, securely
+brew "chezmoi"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
+# Console Matrix
+brew "cmatrix"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# Play, record, convert, and stream select audio and video codecs
+brew "ffmpeg"
+# User-friendly command-line shell for UNIX-like operating systems
+brew "fish"
+# Command-line tools for fly.io services
+brew "flyctl"
+# Command-line fuzzy finder written in Go
+brew "fzf"
+# GNU compiler collection
+brew "gcc"
+# GitHub command-line tool
+brew "gh"
+# Quickly rewrite git repository history
+brew "git-filter-repo"
+# Audit git repos for secrets
+brew "gitleaks"
+# Statically typed language for the Erlang VM
+brew "gleam"
+# Render markdown on the CLI
+brew "glow"
+# Improved top (interactive process viewer)
+brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
+# Handy way to save and run project-specific commands
+brew "just"
+# Modern load testing tool, using Go and JavaScript
+brew "k6"
+# Fast and powerful Git hooks manager for any type of projects
+brew "lefthook"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
+# Powerful, lightweight programming language
+brew "lua"
+# Development kit for the Java programming language
+brew "openjdk"
+# Java-based project management
+brew "maven"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
+# Deep clean and optimize your Mac
+brew "mole"
+# Atlas CLI enables you to manage your MongoDB Atlas
+brew "mongodb-atlas-cli"
+# Fast, highly customisable system info script
+brew "neofetch"
+# HTTP(S) server and reverse proxy, and IMAP/POP3 proxy server
+brew "nginx"
+# Port scanning utility for large networks
+brew "nmap"
+# Retrieves currently playing media, and simulates media actions
+brew "nowplaying-cli"
+# PNG image optimizing utility
+brew "pngquant"
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
+# Object-relational database system
+brew "postgresql@16"
+# Develop and deploy code with zero configuration
+brew "railway"
+# Persistent key-value database, with built-in net interface
+brew "redis"
+# Change macOS audio source from the command-line
+brew "switchaudio-osx"
+# Terminal multiplexer
+brew "tmux"
+# Manage complex tmux sessions easily
+brew "tmuxinator"
+# NetBSD's FTP client
+brew "tnftp"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Execute commands when watched files change
+brew "watchexec"
+# Internet file retriever
+brew "wget"
+# Why is this running?
+brew "witr"
+# Powerful log analytics from the comfort of your command-line
+cask "axiomhq/tap/axiom", trusted: true
+# Terminal-based AI coding assistant
+cask "claude-code@latest"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
+cask "font-hack-nerd-font"
+cask "font-sf-mono"
+cask "font-sf-pro"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
+# Reverse proxy, secure introspectable tunnels to localhost
+cask "ngrok"
+# Tool that provides consistent, highly configurable symbols for apps
+cask "sf-symbols"
+# Multiplayer code editor
+cask "zed"
+go "github.com/go-delve/delve/cmd/dlv"
+go "github.com/maaslalani/fast"
+go "golang.org/x/lint/golint"
+go "golang.org/x/tools/gopls"
+go "github.com/rakyll/hey"
+go "github.com/gokcehan/lf"
+go "honnef.co/go/tools/cmd/staticcheck"
+go "golang.org/x/website/tour"
+cargo "bacon"
+uv "pyrefly"
+
+# Third-party taps (brew bundle dump omits these)
+brew "advtszn/tap/rook", trusted: true
+brew "kriuchkov/tap/tock", trusted: true
+brew "libsql/sqld/sqld", trusted: true
+brew "mongodb/brew/mongodb-community", trusted: true
+brew "mongodb/brew/mongodb-database-tools", trusted: true
+brew "nats-io/nats-tools/nats", trusted: true
+brew "tursodatabase/tap/turso", trusted: true
