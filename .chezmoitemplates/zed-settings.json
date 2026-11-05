@@ -19,11 +19,12 @@
     "ss08": true,
     "ss09": true
   },
-  "buffer_font_size": 14,
+  "buffer_font_size": 15,
   "cli_default_open_behavior": "existing_window",
   "code_lens": "off",
   "collaboration_panel": {
-    "button": false
+    "button": false,
+    "default_width": 0
   },
   "cursor_blink": false,
   "cursor_shape": "bar",

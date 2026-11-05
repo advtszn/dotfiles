@@ -13,7 +13,11 @@ mouse_follows_focus = false
 mouse_hides_on_focus = false
 
 auto_focus_blacklist = ["com.raycast.macos"]   # Raycast popups don't yank workspaces
-run_on_start = []
+# tell SketchyBar when workspaces or windows change, so the bar updates instantly
+run_on_start = [
+  "rift-cli subscribe cli --event workspace_changed --command sketchybar --args --trigger --args rift_workspace_changed",
+  "rift-cli subscribe cli --event windows_changed --command sketchybar --args --trigger --args rift_workspace_changed",
+]
 hot_reload = true
 
 [settings.layout]
@@ -29,7 +33,7 @@ default_orientation = "perpendicular"
 
 # Space around windows, leaves room for JankyBorders
 [settings.layout.gaps.outer]
-top = 8
+top = 14                           # macOS keeps ~32pt for the notch row; +14 sits windows ~6pt below the bar islands (bottom ≈ y40)
 left = 8
 bottom = 8
 right = 8
@@ -53,7 +57,12 @@ enabled = true                     # tab strip beside stacked windows
 enabled = false
 
 [settings.gestures]
-enabled = false                    # set true for 3-finger swipes between workspaces
+enabled = true                     # 3-finger horizontal swipe = next/previous workspace
+fingers = 3
+consume_dock_swipe = true          # Rift takes the swipe so macOS doesn't also switch Spaces
+skip_empty = true                  # swipe past empty workspaces (4, 5)
+invert_horizontal_swipe = false    # flip if the direction feels backwards
+haptics_enabled = true
 
 [virtual_workspaces]
 mode = "per_display"
@@ -90,6 +99,8 @@ comb1 = "Alt + Shift"
 "Alt + 4" = { switch_to_workspace = 3 }
 "Alt + 5" = { switch_to_workspace = 4 }
 "Alt + Tab" = "switch_to_last_workspace"
+"Ctrl + Left" = { prev_workspace = true }     # previous workspace (macOS's own "move a space" keys), skips empty ones
+"Ctrl + Right" = { next_workspace = true }    # next workspace
 
 # send the focused window to a workspace
 "comb1 + 1" = { move_window_to_workspace = 0 }
@@ -119,6 +130,7 @@ comb1 = "Alt + Shift"
 "comb1 + Equal" = { resize_window_grow = "vertical" }     # taller
 "Alt + Slash" = "toggle_orientation"          # side by side <-> stacked split
 "Alt + Comma" = "toggle_stack"                # tab-like stack
+"comb1 + Space" = { toggle_window_floating = { center = true, size = "smart" } }   # "reasonable size": float, centre, sensible size; again to re-tile
 
 # rarely used stuff lives behind a "service" mode
 "comb1 + Semicolon" = { binding_mode = "service" }
@@ -127,7 +139,7 @@ comb1 = "Alt + Shift"
 [binding_modes.service]
 "Escape" = [ "reload_config", { binding_mode = "default" } ]
 "R" = [ "balance", { binding_mode = "default" } ]                    # even out sizes
-"F" = [ "toggle_window_floating", { binding_mode = "default" } ]     # float / unfloat
+"F" = [ { toggle_window_floating = { center = true, size = "smart" } }, { binding_mode = "default" } ]   # float centred / unfloat
 # join with a neighbour: [A|B|C], focus C, ⌥⇧; then ⌥⇧H  ->  A | B/C stacked
 "Alt + Shift + H" = [ { join_window = "left" },  { binding_mode = "default" } ]
 "Alt + Shift + J" = [ { join_window = "down" },  { binding_mode = "default" } ]
