@@ -1,5 +1,7 @@
+tap "acsandmann/tap"
 tap "advtszn/tap", "https://github.com/advtszn/homebrew-tap.git"
 tap "axiomhq/tap"
+tap "felixkratz/formulae", "https://github.com/FelixKratz/homebrew-formulae", trusted: true
 tap "kriuchkov/tap"
 tap "libsql/sqld"
 tap "mongodb/brew"
@@ -99,8 +101,12 @@ brew "watchexec"
 brew "wget"
 # Why is this running?
 brew "witr"
+# Tiling window manager for macOS
+brew "acsandmann/tap/rift", trusted: true
 # A terminal UI for exploring Redis
 brew "advtszn/tap/rook", trusted: true
+# A window border system for macOS
+brew "felixkratz/formulae/borders"
 # Tock v2.0.8 is a simple timetracker for the command line
 brew "kriuchkov/tap/tock", trusted: true
 # The libsql-server application

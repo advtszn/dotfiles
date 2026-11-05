@@ -29,7 +29,7 @@ if status is-interactive
     abbr -a gaa git add -A
     abbr -a gst git stash
     abbr -a gsa git stash apply
-    abbr -a gcheck git checkout
+    abbr -a gck git checkout
     abbr -a gcm git commit
     abbr -a gp git push
     abbr -a gpl git pull

@@ -117,9 +117,18 @@
     "file_icons": true
   },
   "theme": {
-    "dark": "monoszn-dark",
+    "dark": "Vesper",
     "light": "One Light",
     "mode": "dark"
+  },
+  "theme_overrides": {
+    "Vesper": {
+      "syntax": {
+        "property.json_key": {
+          "color": "#FFC799"
+        }
+      }
+    }
   },
   "ui_font_size": 16,
   "vim_mode": true
