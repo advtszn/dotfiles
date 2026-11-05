@@ -29,10 +29,10 @@ default_orientation = "perpendicular"
 
 # Space around windows, leaves room for JankyBorders
 [settings.layout.gaps.outer]
-top = 12
-left = 12
-bottom = 12
-right = 12
+top = 8
+left = 8
+bottom = 8
+right = 8
 
 [settings.layout.gaps.inner]
 horizontal = 12
