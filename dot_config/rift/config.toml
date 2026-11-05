@@ -33,7 +33,7 @@ default_orientation = "perpendicular"
 
 # Space around windows, leaves room for JankyBorders
 [settings.layout.gaps.outer]
-top = 14                           # macOS keeps ~32pt for the notch row; +14 sits windows ~6pt below the bar islands (bottom ≈ y40)
+top = 8                            # notch row (~38pt in More Space) + 8 → windows sit ~6pt under the bar islands, matching the 8pt sides
 left = 8
 bottom = 8
 right = 8
