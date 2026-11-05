@@ -1,3 +1,2 @@
-
 # Added by swiftly
-source "/Users/advait/.swiftly/env.fish"
+test -f "$HOME/.swiftly/env.fish"; and source "$HOME/.swiftly/env.fish"
