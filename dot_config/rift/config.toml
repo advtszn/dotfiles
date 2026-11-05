@@ -74,14 +74,10 @@ workspace_auto_back_and_forth = false
 workspace_names = ["web", "code", "chat", "four", "five"]
 workspace_rules = []
 
-# ── Apps → workspaces (0 = web, 1 = code, 2 = chat) ─────────────────────
+# ── App rules ───────────────────────────────────────────────────────────
+# No workspace pinning: new windows open on whichever workspace you're on.
 # find an app's id: osascript -e 'id of app "Name"'
 app_rules = [
-  { app_id = "dev.serafim.fast",          workspace = 0 },   # Yab
-  { app_id = "com.mitchellh.ghostty",     workspace = 1 },
-  { app_id = "dev.zed.Zed",               workspace = 1 },
-  { app_id = "com.tinyspeck.slackmacgap", workspace = 2 },
-  { app_id = "com.apple.Music",           workspace = 2 },
   { app_id = "com.apple.finder",            floating = true },
   { app_id = "com.apple.systempreferences", floating = true },
 ]

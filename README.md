@@ -31,7 +31,7 @@ Managed with [chezmoi](https://www.chezmoi.io/), guarded by [gitleaks](https://g
 | Files          | [lf](https://github.com/gokcehan/lf), [lsd](https://github.com/lsd-rs/lsd)                                      | `.config/lf/`, `.config/lsd/`                              |
 | Fetch          | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                                                         | `.config/fastfetch/`                                       |
 | Packages       | Homebrew bundle                                                                                                 | `.Brewfile`                                                |
-| Wallpapers     |                                                                                                                 | `.config/wallpapers/`                                      |
+| Wallpapers     |                                                                                                                 | `wallpapers/` (repo only, not applied)                     |
 
 **Palette** — [Vesper](https://github.com/raunofreiberg/vesper):
 `#101010` background · `#ffffff` text · `#ffc799` peach · `#99ffe4` mint · `#ff8080` red · `#a0a0a0` grey · `#505050` dim

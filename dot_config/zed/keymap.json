@@ -21,13 +21,19 @@
   {
     "context": "(Editor && mode == full)",
     "bindings": {
-      "cmd-shift-g": "go_to_line::Toggle"
+      "ctrl-g": null
     }
   },
   {
-    "context": "(Editor && mode == full)",
+    "context": "Workspace",
     "bindings": {
-      "ctrl-g": null
+      "cmd-shift-g": "git_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "Workspace",
+    "unbind": {
+      "ctrl-shift-g": "git_panel::ToggleFocus"
     }
   }
 ]
