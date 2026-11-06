@@ -3,19 +3,7 @@
 My macOS rice: **Vesper** colours everywhere, **Rift** tiling, a two-island **SketchyBar** around the notch, and **JankyBorders**.
 Managed with [chezmoi](https://www.chezmoi.io/), guarded by [gitleaks](https://github.com/gitleaks/gitleaks).
 
-![desktop](screenshots/desktop.jpg)
-
-![bar](screenshots/bar.png)
-
-<table>
-  <tr>
-    <td><img src="screenshots/tiling.jpg" alt="tiling: cmatrix, lf, btop"></td>
-    <td><img src="screenshots/editor.jpg" alt="Zed + Obsidian"></td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center"><img src="screenshots/raycast.jpg" alt="Raycast"></td>
-  </tr>
-</table>
+![rice](screenshots/rice.jpg)
 
 ## What's in here
 
