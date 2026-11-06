@@ -82,6 +82,8 @@ app_rules = [
   { app_id = "dev.zed.Zed",               workspace = 1 },
   { app_id = "com.tinyspeck.slackmacgap", workspace = 2 },
   { app_id = "com.apple.Music",           workspace = 2 },
+  # Discord: floats at the ⌥F (within-gaps) size, never tiles. 1694x1058 = 1710x1112 screen minus gaps/bar
+  { app_id = "com.hnc.Discord", floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.852 } },
   { app_id = "com.apple.finder",            floating = true },
   { app_id = "com.apple.systempreferences", floating = true },
 ]
