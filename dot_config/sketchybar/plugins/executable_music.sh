@@ -1,10 +1,11 @@
 #!/bin/bash
-# Apple Music now-playing marquee (display only, no controls).
-#   playing → scrolling "title · artist"   paused → still, from the start, dimmed
+# Apple Music now playing (display only, no controls, no scrolling).
+#   playing → "title · artist" in white (truncated at 30 chars)   paused → same, grey
 #   Music closed / nothing loaded → hidden
 # Driven by Music's playerInfo notification; the routine tick only checks whether
 # Music is still running (never talks to it, so it can't relaunch Music).
 WHITE=0xffffffff; GREY=0xffa0a0a0
+export LC_ALL=en_US.UTF-8   # so ${#text} counts characters, not bytes
 
 hide() { sketchybar --set music drawing=off --set music.gap drawing=off --set music_island drawing=off; exit 0; }
 
@@ -29,11 +30,8 @@ case "$state" in Playing|Paused) ;; *) hide ;; esac
 [ -z "$title" ] && hide
 
 text="$title"; [ -n "$artist" ] && text="$title · $artist"
+[ ${#text} -gt 40 ] && text="${text:0:39}…"   # island grows up to 40 chars, then truncates
 
-if [ "$state" = "Playing" ]; then
-  sketchybar --set music drawing=on label="$text" label.color=$WHITE icon.color=$WHITE scroll_texts=on
-else
-  # scroll off + re-set label → text snaps back to the start and stays there
-  sketchybar --set music drawing=on scroll_texts=off label="$text" label.color=$GREY icon.color=$GREY
-fi
-sketchybar --set music.gap drawing=on --set music_island drawing=on
+if [ "$state" = "Playing" ]; then col=$WHITE; else col=$GREY; fi
+sketchybar --set music drawing=on label="$text" label.color=$col icon.color=$col \
+           --set music.gap drawing=on --set music_island drawing=on

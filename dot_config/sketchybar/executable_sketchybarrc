@@ -46,12 +46,11 @@ sketchybar --add bracket left_island '/space\..*/' front_app \
   --set left_island background.color=$BG background.border_color=$OUTLINE background.border_width=1 \
         background.corner_radius=10 background.height=34
 
-# ── music island: Apple Music marquee (display only) ─────────────────────
+# ── music island: Apple Music now playing (display only, no scrolling) ──
 sketchybar --add event music_change com.apple.Music.playerInfo \
   --add item music.gap left --set music.gap width=8 icon.drawing=off label.drawing=off drawing=off \
   --add item music left \
   --set music icon=":music:" icon.font="sketchybar-app-font:Regular:14.0" icon.padding_right=8 \
-        label.max_chars=30 label.scroll_duration=200 scroll_texts=off \
         padding_left=12 padding_right=12 drawing=off update_freq=10 \
         script="$PLUGINS/music.sh" \
   --subscribe music music_change system_woke
