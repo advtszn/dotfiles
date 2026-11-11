@@ -1,15 +1,15 @@
 #!/bin/bash
 # SketchyBar — two Vesper islands either side of the notch
 #   left : Rift workspaces (+ app icons, peach underline) · focused app
-#   right: network graph · cpu graph · battery · date + time
+#   right: network ↑/↓ · cpu graph · battery · date + time
 # Reload after editing: sketchybar --reload
 
 PLUGINS="$HOME/.config/sketchybar/plugins"
-FONT="Monaspace Neon Var"
+FONT="Paper Mono"
 
 # Vesper (0xAARRGGBB)
 BG=0xff101010; OUTLINE=0xff282828
-WHITE=0xffffffff; GREY=0xffa0a0a0; DIM=0xff505050; PEACH=0xffffc799
+WHITE=0xffffffff; GREY=0xffa0a0a0; DIM=0xff505050; PEACH=0xffffc799; MINT=0xff99ffe4
 
 # ── bar: transparent strip; the islands (brackets) carry the background ──
 sketchybar --bar position=top height=38 y_offset=4 margin=8 \
@@ -61,27 +61,38 @@ sketchybar --add bracket music_island music \
 
 # ── right island (added right-to-left: clock is outermost) ───────────────
 sketchybar --add item clock right \
-  --set clock icon.drawing=off update_freq=30 script="$PLUGINS/clock.sh" padding_left=14 padding_right=12
+  --set clock icon.drawing=off update_freq=1 script="$PLUGINS/clock.sh" padding_left=14 padding_right=12 \
+  --subscribe clock system_woke
 
 sketchybar --add item battery right \
-  --set battery icon="bat" padding_left=14 padding_right=14 update_freq=60 script="$PLUGINS/battery.sh" \
+  --set battery icon.font="SF Pro:Regular:15.0" icon.padding_right=6 icon.y_offset=1 \
+        padding_left=14 padding_right=14 update_freq=60 script="$PLUGINS/battery.sh" \
   --subscribe battery power_source_change system_woke
 
 sketchybar --add item cpu.label right \
   --set cpu.label icon.drawing=off label.width=34 label.align=right padding_left=4 padding_right=14 \
   --add graph cpu.graph right 44 \
   --set cpu.graph graph.color=$GREY graph.fill_color=0x33a0a0a0 graph.line_width=1.0 \
-        background.height=16 icon="cpu" icon.padding_right=6 padding_left=14 padding_right=2 \
+        background.height=16 icon="CPU" icon.padding_right=6 padding_left=14 padding_right=2 \
         update_freq=2 script="$PLUGINS/cpu.sh"
 
-sketchybar --add item net.label right \
-  --set net.label icon.drawing=off label.width=48 label.align=right padding_left=4 padding_right=14 \
-  --add graph net.graph right 44 \
-  --set net.graph graph.color=$GREY graph.fill_color=0x33a0a0a0 graph.line_width=1.0 \
-        background.height=16 icon="net" icon.padding_right=6 padding_right=2 padding_left=12 \
+# net speeds stacked: ↑ upload on top, ↓ download below. Colour lives in the arrows
+# (peach up, mint down); numbers stay neutral so download (white) still leads. net.up has width=0 so
+# net.down sits in the same slot; both right-aligned to the same width.
+NETFONT="$FONT:Regular:10.0"
+sketchybar --add item net.up right \
+  --set net.up icon="↑" icon.font="$NETFONT" icon.color=$PEACH icon.padding_right=4 \
+        label.font="$NETFONT" label.color=0xffd0d0d0 label.width=54 label.align=right \
+        y_offset=6 width=0 padding_left=4 padding_right=14 label="0 B/s" \
+  --add item net.down right \
+  --set net.down icon="↓" icon.font="$NETFONT" icon.color=$MINT icon.padding_right=4 \
+        label.font="$NETFONT" label.color=$WHITE label.width=54 label.align=right \
+        y_offset=-6 padding_left=4 padding_right=14 label="0 B/s" \
+  --add item net right \
+  --set net icon="net" icon.padding_right=0 label.drawing=off padding_right=8 padding_left=14 \
         update_freq=2 script="$PLUGINS/net.sh"
 
-sketchybar --add bracket right_island net.graph net.label cpu.graph cpu.label battery clock \
+sketchybar --add bracket right_island net net.up net.down cpu.graph cpu.label battery clock \
   --set right_island background.color=$BG background.border_color=$OUTLINE background.border_width=1 \
         background.corner_radius=10 background.height=34
 

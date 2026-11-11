@@ -127,6 +127,7 @@ cask "claude-code@latest"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 cask "font-hack-nerd-font"
+cask "font-paper-mono"
 cask "font-sf-mono"
 cask "font-sf-pro"
 cask "font-sketchybar-app-font"
