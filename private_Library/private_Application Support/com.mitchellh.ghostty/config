@@ -12,5 +12,3 @@ working-directory = /Users/advait/Desktop
 
 # Defaults plus ssh-env/ssh-terminfo (both off by default).
 shell-integration-features = ssh-env,ssh-terminfo
-keybind = cmd+k=toggle_command_palette
-keybind = cmd+shift+p=text:\x10
