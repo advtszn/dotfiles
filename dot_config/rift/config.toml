@@ -4,7 +4,7 @@
 
 [settings]
 default_disable = false            # manage every space automatically
-animate = true
+animate = false
 animation_duration = 0.2
 animation_fps = 120.0              # 0.0 (display rate) crashes in 0.7.2
 
