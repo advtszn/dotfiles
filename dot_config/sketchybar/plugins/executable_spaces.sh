@@ -10,7 +10,8 @@ while IFS=$'\t' read -r idx active count apps; do
   IFS='|' read -ra list <<<"$apps"
   for app in "${list[@]}"; do
     [ -z "$app" ] && continue
-    case "$app" in Yab) icon_result=":arc:" ;; *) __icon_map "$app" ;; esac
+    # Yab has no upstream icon; :yab: is a custom glyph (fonts/build-app-font.py)
+    case "$app" in Yab) icon_result=":yab:" ;; *) __icon_map "$app" ;; esac
     icons+="$icon_result "
   done
   icons="${icons% }"

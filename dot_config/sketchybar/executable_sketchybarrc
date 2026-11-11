@@ -23,7 +23,7 @@ sketchybar --default \
 
 # ── left island ─────────────────────────────────────────────────────────
 sketchybar --add event rift_workspace_changed
-APPFONT="sketchybar-app-font:Regular:14.0"
+APPFONT="sketchybar-app-font-plus:Regular:14.0"
 for i in 1 2 3 4 5; do
   # icon = number, label = icons of the apps on it, background = underline (current only)
   sketchybar --add item space.$i left \
@@ -50,7 +50,7 @@ sketchybar --add bracket left_island '/space\..*/' front_app \
 sketchybar --add event music_change com.apple.Music.playerInfo \
   --add item music.gap left --set music.gap width=8 icon.drawing=off label.drawing=off drawing=off \
   --add item music left \
-  --set music icon=":music:" icon.font="sketchybar-app-font:Regular:14.0" icon.padding_right=8 \
+  --set music icon=":music:" icon.font="sketchybar-app-font-plus:Regular:14.0" icon.padding_right=8 \
         padding_left=12 padding_right=12 drawing=off update_freq=10 \
         script="$PLUGINS/music.sh" \
   --subscribe music music_change system_woke
