@@ -3,3 +3,6 @@ README.md
 .gitleaks.toml
 screenshots
 wallpapers
+
+# private: project names/paths (rex layouts, ex-tmuxinator)
+.config/rex/projects.lua

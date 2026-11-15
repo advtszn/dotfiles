@@ -77,9 +77,13 @@ workspace_rules = []
 # ── Apps → workspaces (0 = web, 1 = code, 2 = chat) ─────────────────────
 # find an app's id: osascript -e 'id of app "Name"'
 app_rules = [
-  { app_id = "dev.serafim.fast",          workspace = 0 },   # Yab
+  # Yab: titled windows tile on web. Its small window (links opened from other apps) has an
+  # empty title, so it floats instead (still lands on web: Yab activating switches workspace first).
+  { app_id = "dev.serafim.fast", title_regex = ".", workspace = 0 },
+  { app_id = "dev.serafim.fast", title_regex = "^$", floating = true },
   { app_id = "com.mitchellh.ghostty",     workspace = 1 },
   { app_id = "dev.zed.Zed",               workspace = 1 },
+  { app_id = "com.superlogical.rex",      workspace = 1 },   # Rex
   { app_id = "com.tinyspeck.slackmacgap", workspace = 2 },
   { app_id = "com.apple.Music",           workspace = 2 },
   # Discord: floats at the ⌥F (within-gaps) size, never tiles. 1694x1058 = 1710x1112 screen minus gaps/bar
