@@ -86,11 +86,12 @@ app_rules = [
   { app_id = "com.superlogical.rex",      workspace = 1 },   # Rex
   # Slack, Music, Discord: workspace 3 (chat), floating at the ⌥F (within-gaps) size, never tile.
   # 1694x1058 = 1710x1112 screen minus gaps/bar
-  { app_id = "com.tinyspeck.slackmacgap", workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.852 } },
-  { app_id = "com.apple.Music",           workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.852 } },
-  { app_id = "com.hnc.Discord",           workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.852 } },
+  { app_id = "com.tinyspeck.slackmacgap", workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.5 } },
+  { app_id = "com.apple.Music",           workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.5 } },
+  { app_id = "com.hnc.Discord",           workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.5 } },
   { app_id = "com.apple.finder",            floating = true },
   { app_id = "com.apple.systempreferences", floating = true },
+  { app_id = "com.electron.wispr-flow",     floating = true },   # Wispr Flow: floats on whatever workspace is active
 ]
 
 [modifier_combinations]
