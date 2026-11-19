@@ -117,7 +117,7 @@ comb1 = "Alt + Shift"
 "comb1 + 4" = { move_window_to_workspace = 3 }
 "comb1 + 5" = { move_window_to_workspace = 4 }
 
-# focus a neighbour (same keys as tmux panes)
+# focus a neighbour (vim-style hjkl)
 "Alt + H" = { move_focus = "left" }
 "Alt + J" = { move_focus = "down" }
 "Alt + K" = { move_focus = "up" }

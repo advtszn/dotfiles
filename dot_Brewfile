@@ -88,9 +88,6 @@ brew "ripgrep"
 # Change macOS audio source from the command-line
 brew "switchaudio-osx"
 # Terminal multiplexer
-brew "tmux"
-# Manage complex tmux sessions easily
-brew "tmuxinator"
 # NetBSD's FTP client
 brew "tnftp"
 # Display directories as trees (with optional color/HTML output)

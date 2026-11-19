@@ -14,7 +14,7 @@ Managed with [chezmoi](https://www.chezmoi.io/), guarded by [gitleaks](https://g
 | Borders        | [JankyBorders](https://github.com/FelixKratz/JankyBorders)                                                      | `.config/borders/bordersrc`                                |
 | Terminal       | [Ghostty](https://ghostty.org) — Vesper, blur, Monaspace Neon                                                   | `Library/Application Support/com.mitchellh.ghostty/config` |
 | Shell          | [fish](https://fishshell.com) + [Starship](https://starship.rs) prompt                                          | `.config/fish/`, `.config/starship.toml`                   |
-| Multiplexer    | tmux + [tmux-nova](https://github.com/o0th/tmux-nova)                                                           | `.tmux.conf`                                               |
+| Multiplexer    | [Rex](https://www.superlogical.com/rex) — sessions, project layouts from the command palette                       | `.config/rex/`                                             |
 | Editor         | [Zed](https://zed.dev) — Vesper, vim mode, decluttered UI                                                       | `.config/zed/`                                             |
 | Files          | [lf](https://github.com/gokcehan/lf), [lsd](https://github.com/lsd-rs/lsd)                                      | `.config/lf/`, `.config/lsd/`                              |
 | Fetch          | [fastfetch](https://github.com/fastfetch-cli/fastfetch)                                                         | `.config/fastfetch/`                                       |

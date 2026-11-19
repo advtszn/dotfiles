@@ -4,5 +4,5 @@ README.md
 screenshots
 wallpapers
 
-# private: project names/paths (rex layouts, ex-tmuxinator)
+# private: project names/paths (rex layouts)
 .config/rex/projects.lua

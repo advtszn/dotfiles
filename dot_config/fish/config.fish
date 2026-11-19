@@ -39,14 +39,6 @@ if status is-interactive
     abbr -a brb bun run build
     abbr -a pnd pnpm dev
 
-    # ── tmuxinator ──
-    abbr -a mux tmuxinator
-    abbr -a muxc tmuxinator copy
-    abbr -a muxd tmuxinator delete
-    abbr -a muxe tmuxinator edit
-    abbr -a muxl tmuxinator list
-    abbr -a muxn tmuxinator new
-    abbr -a muxs tmuxinator start
 
     abbr -a z zed
 end

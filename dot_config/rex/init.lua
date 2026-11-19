@@ -1,10 +1,10 @@
 -- Ghostty config `keybind = cmd+shift+p=text:\x10` (\x10 is ctrl+p)
 rex.bind("shift+cmd+p", "pane.send_key", { key = "ctrl+p" })
 
--- ── Project layouts (replaces tmuxinator) ──
+-- ── Project layouts ──
 -- Layouts live in projects.lua next to this file, kept out of the public repo.
 -- Each project becomes an action: `rex do <name>` or pick it in the command palette.
--- If the session already exists it is reused, like `tmuxinator start`.
+-- If the session already exists it is reused.
 local HOME = os.getenv("HOME")
 local SHELL = "com.superlogical.terminal.shell"
 
