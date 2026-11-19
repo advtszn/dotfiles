@@ -33,7 +33,7 @@ default_orientation = "perpendicular"
 
 # Space around windows, leaves room for JankyBorders
 [settings.layout.gaps.outer]
-top = 8                            # notch row (~38pt in More Space) + 8 → windows sit ~6pt under the bar islands, matching the 8pt sides
+top = 10                           # below the 32pt notch row (Default scaling); windows sit ~8pt under the bar islands
 left = 8
 bottom = 8
 right = 8
@@ -85,10 +85,10 @@ app_rules = [
   { app_id = "dev.zed.Zed",               workspace = 1 },
   { app_id = "com.superlogical.rex",      workspace = 1 },   # Rex
   # Slack, Music, Discord: workspace 3 (chat), floating at the ⌥F (within-gaps) size, never tile.
-  # 1694x1058 = 1710x1112 screen minus gaps/bar
-  { app_id = "com.tinyspeck.slackmacgap", workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.5 } },
-  { app_id = "com.apple.Music",           workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.5 } },
-  { app_id = "com.hnc.Discord",           workspace = 2, floating = true, size = { w = 1694, h = 1058 }, position = { x = 0.5, y = 0.5 } },
+  # 1454x904 = 1470x956 (Default) screen minus 32pt menu bar row and gaps
+  { app_id = "com.tinyspeck.slackmacgap", workspace = 2, floating = true, size = { w = 1454, h = 904 }, position = { x = 0.5, y = 0.5 } },
+  { app_id = "com.apple.Music",           workspace = 2, floating = true, size = { w = 1454, h = 904 }, position = { x = 0.5, y = 0.5 } },
+  { app_id = "com.hnc.Discord",           workspace = 2, floating = true, size = { w = 1454, h = 904 }, position = { x = 0.5, y = 0.5 } },
   { app_id = "com.apple.finder",            floating = true },
   { app_id = "com.apple.systempreferences", floating = true },
   { app_id = "com.electron.wispr-flow",     floating = true },   # Wispr Flow: floats on whatever workspace is active

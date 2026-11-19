@@ -12,7 +12,7 @@ local function open_project(p)
   local root = (p.root:gsub("^~", HOME))
   for _, s in ipairs(rex.call("session.list", {}).sessions or {}) do
     if s.label == p.name then
-      pcall(rex.invoke, "session.select", { session_id = s.session_id })
+      pcall(rex.client.queue, "session.select", { session_id = s.session_id })  -- switch the app that ran it (no-op from the CLI)
       return { session_id = s.session_id, reused = true }
     end
   end
@@ -30,13 +30,13 @@ local function open_project(p)
     end
   end
   rex.call("session.focus_window", { session_id = r.session_id, window_id = r.initial_windows[1].window_id })
-  pcall(rex.invoke, "session.select", { session_id = r.session_id })
+  pcall(rex.client.queue, "session.select", { session_id = r.session_id })  -- switch the app that ran it (no-op from the CLI)
   return { session_id = r.session_id }
 end
 
 local ok, projects = pcall(dofile, HOME .. "/.config/rex/projects.lua")
 if ok and type(projects) == "table" then
   for _, p in ipairs(projects) do
-    rex.action{ name = p.name:gsub("-", "_"), title = "Open " .. p.name, run = function() return open_project(p) end }
+    rex.action{ name = (p.name:gsub("-", "_")), title = "Open " .. p.name, run = function() return open_project(p) end }
   end
 end

@@ -30,7 +30,7 @@ case "$state" in Playing|Paused) ;; *) hide ;; esac
 [ -z "$title" ] && hide
 
 text="$title"; [ -n "$artist" ] && text="$title · $artist"
-[ ${#text} -gt 40 ] && text="${text:0:39}…"   # island grows up to 40 chars, then truncates
+[ ${#text} -gt 35 ] && text="${text:0:34}…"   # island grows up to 35 chars, then truncates
 
 if [ "$state" = "Playing" ]; then col=$WHITE; else col=$GREY; fi
 sketchybar --set music drawing=on label="$text" label.color=$col icon.color=$col \
